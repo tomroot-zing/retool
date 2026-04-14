@@ -1,0 +1,98 @@
+{
+  "type": "restapi",
+  "host": null,
+  "port": null,
+  "databaseName": null,
+  "databaseUsername": null,
+  "databasePassword": null,
+  "description": null,
+  "outboundRegion": null,
+  "ssl": null,
+  "editPrivilege": null,
+  "options": {
+    "baseURL": "https://api.wheniwork.com/2/",
+    "headers": [
+      ["Authorization", "Bearer AUTHORIZATION_TOKEN"],
+      ["W-UserId", "AUTHORIZATION_UID"]
+    ],
+    "authSteps": [
+      {
+        "body": "[{\"key\":\"email\",\"value\":\"hue@zingermans.com\"},{\"key\":\"password\",\"value\":\"r3jV$94t!Xb83VP2\"}]",
+        "type": "http_request",
+        "query": "https://api.login.wheniwork.com/login",
+        "method": "POST",
+        "headers": "[{\"key\":\"W-Key\",\"value\":\"e7573871f97e036055e8cbedadb02a6fa8c68d10\"},{\"key\":\"content-type\",\"value\":\"application/json\"}]",
+        "bodyType": "json",
+        "runWhenModelUpdates": false
+      },
+      {
+        "type": "define_variable",
+        "defined_variable_name": "AUTHORIZATION_TOKEN",
+        "defined_variable_value": "{{ http1.body.token }}"
+      },
+      {
+        "type": "http_request",
+        "query": "https://api.wheniwork.com/2/login?show_pending=true",
+        "method": "GET",
+        "headers": "[{\"key\":\"Host\",\"value\":\"api.wheniwork.com\"},{\"key\":\"Authorization\",\"value\":\"Bearer AUTHORIZATION_TOKEN\"}]",
+        "bodyType": "json",
+        "runWhenModelUpdates": true
+      },
+      {
+        "type": "define_variable",
+        "defined_variable_name": "AUTHORIZATION_UID",
+        "defined_variable_value": "{{ http3.body.users[0].id }}"
+      }
+    ],
+    "urlparams": [["", ""]],
+    "auth0_domain": "",
+    "oauth2_scope": "",
+    "auth0_clientID": "",
+    "authentication": "custom",
+    "basic_password": "",
+    "basic_username": "",
+    "digest_password": "",
+    "digest_username": "",
+    "oauth2_auth_url": "",
+    "cookiesToForward": [],
+    "oauth1_token_key": "",
+    "oauth2_client_id": "",
+    "refreshAuthSteps": [
+      {
+        "type": "http_request",
+        "query": "https://api.login.wheniwork.com/refresh",
+        "method": "POST",
+        "headers": "[{\"key\":\"Authorization\",\"value\":\"Bearer AUTHORIZATION_TOKEN\"},{\"key\":\"W-UserId\",\"value\":\"AUTHORIZATION_UID\"}]",
+        "bodyType": "json",
+        "runWhenModelUpdates": false
+      }
+    ],
+    "forwardAllCookies": false,
+    "skipConsentScreen": true,
+    "auth0_clientSecret": "",
+    "extraBodyKeyValues": [["", ""]],
+    "verify_session_url": "",
+    "oauth1_consumer_key": "",
+    "oauth1_token_secret": "",
+    "oauth2_access_token": "",
+    "oauth2_callback_url": "OAUTH2_CALLBACK_URL",
+    "session_cookie_name": "",
+    "oauth2_client_secret": "",
+    "oauth2_refresh_token": "",
+    "auth0_custom_audience": "",
+    "oauth1_consumer_secret": "",
+    "oauth1_realm_parameter": "",
+    "oauth1_signature_method": "HMAC-SHA1",
+    "oauth2_access_token_url": "",
+    "verify_session_action_enabled": false,
+    "digest_server_auth_header_response": "",
+    "verify_session_after_custom_expiry_action": {
+      "expiryTimeInSeconds": "300"
+    },
+    "verify_session_after_custom_expiry_enabled": true
+  },
+  "environment": "production",
+  "dynamicallyQueryable": false,
+  "uuid": "8a72345d-3fd9-4083-a365-326ec9ff157a",
+  "toolscriptVersion": "1.0.0"
+}
