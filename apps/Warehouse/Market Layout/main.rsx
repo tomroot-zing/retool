@@ -12,7 +12,7 @@
       hiddenByIndex=""
       iconByIndex=""
       imageByIndex=""
-      label="Market Prefix"
+      label="Market Prefix:"
       labels="{{item.prefix}}"
       overlayMaxHeight={375}
       placeholder="Select an option"
