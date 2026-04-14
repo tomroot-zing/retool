@@ -1,0 +1,107 @@
+id: trfrm_punch_data
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  queryRefreshTime: ''
+  allowedGroupIds: []
+  streamResponse: false
+  lastReceivedFromResourceAt: null
+  isFunction: false
+  functionParameters: null
+  queryDisabledMessage: ''
+  servedFromCache: false
+  offlineUserQueryInputs: ''
+  functionDescription: null
+  successMessage: ''
+  queryDisabled: ''
+  playgroundQuerySaveId: latest
+  workflowParams: null
+  resourceNameOverride: ''
+  runWhenModelUpdates: false
+  workflowRunExecutionType: sync
+  showFailureToaster: true
+  query: |
+    let result = []
+    qry_punch_data.data?.map(employee => {
+      employee?.map(punch => {
+        punch?.segments.map(segment => {
+          let detail = {}
+          detail.paylocity_id = punch.employeeId
+          detail.start_time = segment?.relativeStart
+          detail.end_time= segment?.relativeEnd
+          detail.punch_origin = segment?.origin
+          detail.duration = segment?.durationSeconds/3600
+          detail.dept_id = segment?.costCenters[2]?.code
+          detail.dept_name = segment?.costCenters[2]?.name
+          result.push(detail)
+        })
+      })
+    })
+    return result;
+  playgroundQueryUuid: ''
+  playgroundQueryId: null
+  error: null
+  workflowRunBodyType: raw
+  privateParams: []
+  queryRunOnSelectorUpdate: false
+  runWhenPageLoadsDelay: ''
+  data: null
+  importedQueryInputs:
+    ordered: []
+  _additionalScope: []
+  isImported: false
+  showSuccessToaster: true
+  cacheKeyTtl: ''
+  requestSentTimestamp: null
+  metadata: null
+  queryRunTime: null
+  changesetObject: ''
+  offlineOptimisticResponse: null
+  errorTransformer: return data.error
+  finished: null
+  confirmationMessage: null
+  isFetching: false
+  changeset: ''
+  rawData: null
+  queryTriggerDelay: '0'
+  resourceTypeOverride: null
+  watchedParams: []
+  enableErrorTransformer: false
+  showLatestVersionUpdatedWarning: false
+  timestamp: 0
+  evalType: script
+  importedQueryDefaults:
+    ordered: []
+  enableTransformer: false
+  showUpdateSetValueDynamicallyToggle: true
+  overrideOrgCacheForUserCache: false
+  runWhenPageLoads: false
+  transformer: return data
+  events: []
+  queryTimeout: '10000'
+  workflowId: null
+  requireConfirmation: false
+  queryFailureConditions: ''
+  changesetIsObject: false
+  enableCaching: false
+  allowedGroups: []
+  offlineQueryType: None
+  queryThrottleTime: '750'
+  updateSetValueDynamically: false
+  notificationDuration: ''
+createdAt: 2024-10-08T16:23:12.019Z
+blockData:
+  top: 96
+  left: 1840
+  uuid: f301f259-a6ad-46f1-9611-4acf7581c5ad
+  pluginId: trfrm_punch_data
+  blockType: code
+  dimensions:
+    width: 496
+    height: 416
+  editorType: JavascriptQuery
+  resourceName: JavascriptQuery
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - 519b5768-95ce-4e72-b10a-e12efac0c299

@@ -1,0 +1,55 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "78ea716e-a9fd-11f0-b86d-27a6a3a61ee6",
+  "appTemplate": {
+    "mobileAppSettings": {
+      "object": {
+        "mobileOfflineModeEnabled": false
+      }
+    },
+    "appMaxWidth": "1560px",
+    "experimentalFeatures": {
+      "object": {
+        "sourceControlTemplateDehydration": false,
+        "multiplayerEditingEnabled": false
+      }
+    },
+    "pageCodeFolders": {
+      "object": {
+        "ncns": {
+          "array": []
+        },
+        "schedule_summary": {
+          "array": []
+        },
+        "todays_schedule": {
+          "array": []
+        },
+        "todays_clock_punches": {
+          "array": []
+        },
+        "schedule_no_punch": {
+          "array": []
+        },
+        "call_offs_today": {
+          "array": []
+        },
+        "late_per_schedule": {
+          "array": []
+        }
+      }
+    },
+    "notificationsSettings": {
+      "object": {
+        "globalQueryShowFailureToast": true,
+        "globalQueryShowSuccessToast": false,
+        "globalQueryToastDuration": 4.5
+      }
+    },
+    "queryStatusVisibility": true,
+    "rootScreen": "schedule_summary",
+    "isFetching": true,
+    "version": "3.315.0"
+  }
+}
