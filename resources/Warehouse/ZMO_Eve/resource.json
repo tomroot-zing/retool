@@ -1,0 +1,24 @@
+{
+  "type": "mssql",
+  "host": "209.124.54.4",
+  "port": "1433",
+  "databaseName": "ZCommerce",
+  "databaseUsername": "zingsa",
+  "databasePassword": "",
+  "description": null,
+  "outboundRegion": null,
+  "ssl": false,
+  "editPrivilege": false,
+  "options": {
+    "tds": "7_4",
+    "version": "SqlQueryUnified",
+    "connectionString": "",
+    "connectorVersion": "1",
+    "queryEditorModes": { "allowGuiMode": true, "allowSqlMode": true },
+    "credentialPrivileges": { "allowRead": true, "allowWrite": true }
+  },
+  "environment": "production",
+  "dynamicallyQueryable": false,
+  "uuid": "6a81a697-1bb8-4622-8d67-6cde15032dd8",
+  "toolscriptVersion": "1.0.0"
+}
