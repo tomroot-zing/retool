@@ -1,0 +1,35 @@
+{
+  "button1": {
+    "subcontainer": "modalFrame1",
+    "row": 0.8,
+    "col": 8,
+    "height": 1,
+    "width": 2
+  },
+  "modalCloseButton1": {
+    "rowGroup": "header",
+    "subcontainer": "modalFrame1",
+    "col": 9,
+    "height": 1
+  },
+  "modalTitle1": {
+    "rowGroup": "header",
+    "subcontainer": "modalFrame1",
+    "height": 0.6,
+    "width": 9
+  },
+  "select1": {
+    "subcontainer": "modalFrame1",
+    "row": 1,
+    "height": 0.2,
+    "width": 6
+  },
+  "table26": {
+    "height": 15.4,
+    "width": 12
+  },
+  "text7": {
+    "subcontainer": "modalFrame1",
+    "height": 0.6
+  }
+}
