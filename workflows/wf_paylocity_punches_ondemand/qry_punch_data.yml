@@ -1,0 +1,111 @@
+id: qry_punch_data
+type: datasource
+subtype: RESTQuery
+resourceName: 42fb7d85-446b-474f-8baf-53b13a608cca
+resourceDisplayName: Paylocity TimePunch API
+template:
+  queryRefreshTime: ''
+  paginationLimit: ''
+  allowedGroupIds: []
+  streamResponse: false
+  body: ''
+  lastReceivedFromResourceAt: null
+  isFunction: false
+  functionParameters: null
+  queryDisabledMessage: ''
+  servedFromCache: false
+  offlineUserQueryInputs: ''
+  functionDescription: null
+  successMessage: ''
+  queryDisabled: ''
+  playgroundQuerySaveId: latest
+  workflowParams: null
+  resourceNameOverride: ''
+  runWhenModelUpdates: false
+  paginationPaginationField: ''
+  workflowRunExecutionType: sync
+  headers: ''
+  showFailureToaster: true
+  paginationEnabled: false
+  query: >-
+    employees/{{value.paylocity_id}}/punchDetails?relativeStart={{
+    moment(code1.data).format('LL') }}&relativeEnd={{
+    moment(code1.data).add(1,"days").format('LL') }}
+  playgroundQueryUuid: ''
+  playgroundQueryId: null
+  error: null
+  workflowRunBodyType: raw
+  privateParams: []
+  queryRunOnSelectorUpdate: false
+  runWhenPageLoadsDelay: ''
+  data: null
+  importedQueryInputs:
+    ordered: []
+  isImported: false
+  showSuccessToaster: true
+  cacheKeyTtl: ''
+  requestSentTimestamp: null
+  cookies: ''
+  metadata: null
+  queryRunTime: null
+  changesetObject: ''
+  offlineOptimisticResponse: null
+  errorTransformer: return data.error
+  finished: null
+  confirmationMessage: null
+  isFetching: false
+  changeset: ''
+  rawData: null
+  queryTriggerDelay: '0'
+  resourceTypeOverride: null
+  watchedParams: []
+  enableErrorTransformer: false
+  showLatestVersionUpdatedWarning: false
+  paginationDataField: ''
+  timestamp: 0
+  evalType: script
+  importedQueryDefaults:
+    ordered: []
+  enableTransformer: false
+  showUpdateSetValueDynamicallyToggle: true
+  version: 2
+  overrideOrgCacheForUserCache: false
+  runWhenPageLoads: false
+  transformer: return data
+  events: []
+  queryTimeout: '10000'
+  workflowId: null
+  requireConfirmation: false
+  type: GET
+  queryFailureConditions: ''
+  changesetIsObject: false
+  enableCaching: false
+  allowedGroups: []
+  bodyType: none
+  offlineQueryType: None
+  queryThrottleTime: '750'
+  updateSetValueDynamically: false
+  notificationDuration: ''
+createdAt: 2024-10-08T15:46:46.680Z
+blockData:
+  top: 64
+  left: 1024
+  uuid: 519b5768-95ce-4e72-b10a-e12efac0c299
+  options:
+    iterable: c012012a-d6f2-49fc-9207-5ba39837e2cd
+    executionMode: parallel
+    iterationErrorConfig:
+      errorPolicy: ignore
+  pluginId: qry_punch_data
+  blockType: loop
+  dimensions:
+    width: 688
+    height: 356
+  editorType: RESTQuery
+  onboarding: false
+  isMinimized: false
+  resourceName: 42fb7d85-446b-474f-8baf-53b13a608cca
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - c012012a-d6f2-49fc-9207-5ba39837e2cd
+    - fffa150d-3705-4408-8968-53eaf552f78b

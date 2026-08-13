@@ -1,0 +1,31 @@
+{
+  "authLogin5": {
+    "subcontainer": "header2",
+    "row": 1.8,
+    "col": 10,
+    "height": 1,
+    "width": 2
+  },
+  "avatar1": {
+    "rowGroup": "footer",
+    "subcontainer": "sidebarFrame1",
+    "height": 0.2,
+    "width": 1
+  },
+  "dateRange2": {
+    "subcontainer": "header2",
+    "row": 1.2,
+    "height": 0.2,
+    "width": 9
+  },
+  "navigation1": {
+    "subcontainer": "sidebarFrame1",
+    "height": 0.8,
+    "width": 1
+  },
+  "text5": {
+    "subcontainer": "header2",
+    "height": 0.6,
+    "width": 5
+  }
+}
