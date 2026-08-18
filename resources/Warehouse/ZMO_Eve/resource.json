@@ -13,7 +13,7 @@
     "tds": "7_4",
     "version": "SqlQueryUnified",
     "connectionString": "",
-    "connectorVersion": "1",
+    "connectorVersion": "3",
     "queryEditorModes": { "allowGuiMode": true, "allowSqlMode": true },
     "credentialPrivileges": { "allowRead": true, "allowWrite": true }
   },
